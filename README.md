@@ -149,3 +149,5 @@ Each article includes:
 - If no fact-check data is available, placeholder content is shown.
 - If a source link is broken or missing, a fallback message appears.
 - No layout issues occur when data is incomplete.
+
+edit your branch files
