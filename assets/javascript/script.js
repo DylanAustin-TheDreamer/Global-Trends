@@ -20,3 +20,34 @@ fetch('https://factchecktools.googleapis.com/v1alpha1/claims:search?query=climat
   .then(response => response.json())
   .then(data => console.log(data.claims));
 
+// Slideshow functionality
+let slideIndex = 0;
+document.addEventListener('DOMContentLoaded', function() {
+  showSlides(slideIndex);
+
+  // Attach event listeners if needed (for dynamic cases)
+  window.changeSlide = function(n) {
+    showSlides(slideIndex += n);
+  }
+  window.currentSlideSet = function(n) {
+    showSlides(slideIndex = n - 1);
+  }
+});
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("slide");
+  const dots = document.getElementsByClassName("dot");
+  if (n >= slides.length) slideIndex = 0;
+  if (n < 0) slideIndex = slides.length - 1;
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    slides[i].classList.remove("active");
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+  slides[slideIndex].style.display = "block";
+  slides[slideIndex].classList.add("active");
+  dots[slideIndex].classList.add("active");
+}
+
