@@ -5,16 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>True or False News</title>
+  <!-- our CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- our article CSS file-->
+  <link rel="stylesheet" href="assets/css/article.css">
 
   <!-- font awesome kit -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-  <header class="py-3 mb-4">
+  <!-- Dylan removed mb-4 as it was making space between header and hero image-->
+  <header class="py-3">
     <div class="container">
-      <h1 class="display-4">TRUE or FALSE News</h1>
+      <h1 class="display-6">TRUE or FALSE News</h1>
 
       <!-- Sample of navbar with Search functionality -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -23,7 +27,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>9
+            <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -60,7 +64,8 @@
       </nav>
     </div>
   </header>
-  <main>
+  <!-- End of header -->
+
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
       <div class="slideshow-container">
@@ -86,12 +91,83 @@
         </div>
       </div>
     </section>
+    <!-- End of hero section -->
+
+    <!-- Main content - Keep hero and articles out of main for anti-margin purposes -->
+    <main>
     <div class="container">
       <h2>Welcome to Our Website</h2>
       <p>This is a sample HTML document with Bootstrap and Font Awesome integration.</p>
       <button class="btn btn-primary"><i class="fas fa-thumbs-up"></i> Click Me!</button>
     </div>
-</main>
+    </main>
+  <!-- End of main content body -->
+
+    <!-- Article needs to sit outside of main so it can hug sides >< -->
+    <!-- Article Section -->
+    <div class="space">
+    </div>
+    <div class="space">
+    </div>
+    <article class="our-article py-3">
+        <nav class="article-nav">
+            <h2>Recent News on Geopolitics</h2>
+        </nav>
+        <p>Sand Dunes in the Middle East</p>
+
+        <div class="flex-grid">
+            <div class="article-left">
+                
+            </div>
+            <div class="article-right">
+                
+            </div>
+        </div>
+    </article>
+    <div class="space">
+    </div>
+    <!-- End of article section-->
+
+    <!-- Add the JS append article -->
+     <main>
+      <div class="container fact">
+      </div>
+     </main>
+     <div class="space">
+     </div>
+     <!-- end of JS append article-->
+      <!-- Article Section -->
+    <div class="space">
+    </div>
+    <div class="space">
+    </div>
+    <article class="our-article py-3">
+        <nav class="article-nav">
+            <h2>Weather Forecast</h2>
+        </nav>
+        <p>Will be sunny on Saturday</p>
+
+        <div class="flex-grid">
+            <div class="article-left">
+                
+            </div>
+            <div class="article-right">
+                
+            </div>
+        </div>
+    </article>
+    <div class="space">
+    </div>
+    <!-- End of article section-->
+
+    <!-- Add the JS append article -->
+     <main>
+      <div class="container fact">
+      </div>
+     </main>
+     <div class="space">
+     </div>
+     <!-- end of JS append article-->
 
   <!-- Footer / contact section -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
@@ -104,19 +180,19 @@
     <div id="social-networks">
       <a href="https://www.facebook.com" target="_blank" rel="noopener"
         aria-label="Visit our Facebook page (opens in a new tab)">
-        <i class="fa-brands fa-facebook i-size" style="color: rgb(0, 110, 255);"></i></a>
+        <i class="fa-brands fa-facebook i-size" style="color: rgb(163, 163, 163);"></i></a>
 
       <a href="https://www.twitter.com/" target="_blank" rel="noopener"
         aria-label="Visit our Twitter page (opens in a new tab)">
-        <i class="fa-brands fa-twitter-square i-size" style="color: rgb(151, 248, 255);"></i></a>
+        <i class="fa-brands fa-twitter-square i-size" style="color: rgb(163, 163, 163);"></i></a>
 
       <a href="https://www.youtube.com/" target="_blank" rel="noopener"
         aria-label="Visit our YouTube page (opens in a new tab)">
-        <i class="fa-brands fa-youtube-square i-size" style="color: red;"></i></a>
+        <i class="fa-brands fa-youtube-square i-size" style="color: rgb(163, 163, 163);"></i></a>
 
       <a href="https://www.instagram.com/" target="_blank" rel="noopener"
         aria-label="Visit our Instagram page (opens in a new tab)">
-        <i class="fa-brands fa-instagram i-size" style="color: #d62d95;"></i></a>
+        <i class="fa-brands fa-instagram i-size" style="color: rgb(163, 163, 163);"></i></a>
 
   </footer>
   <!-- End of footer -->
