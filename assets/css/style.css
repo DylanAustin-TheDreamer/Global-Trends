@@ -1,20 +1,32 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+/* Val - Headings for visual hierarchy */
 h1 {
-    color: #094b26;
+  font-size: 2rem; /* Large site title */
+  margin-bottom: 1rem;
 }
 
 
 /* Reset and layout */
 html {
   height: 100%;
+ 
 }
+
+/* Edited by Val to support readability */
 body {
+  font: 1rem; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  font-size: 1rem; /* Equivalent to 16px */
+  line-height: 1.6; /* Improves paragraph spacing */
+  color: #fdfdfd; /* High contrast on dark backgrounds */
+  background-color: #003300; /* Calm dark green */
   margin: 0;
+  padding: 0;
   font-family: 'Roboto', 'Open Sans';
 }
 
