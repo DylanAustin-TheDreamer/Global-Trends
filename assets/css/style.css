@@ -225,3 +225,26 @@ main{
     padding: 0;
   }
 }
+
+/* Val: Big smartphones (400px and up) */
+@media screen and (min-width: 400px) {
+    #hero {
+        min-height: 300px;
+    }
+}
+
+/* Val: Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    #hero {
+        min-height: 450px;
+
+    }
+}
+
+/* Val: Medium devices (tablets, 900px and up) */
+@media screen and (min-width: 900px) {
+    #hero {
+        min-height: 550px;
+
+    }
+}
