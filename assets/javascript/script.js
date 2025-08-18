@@ -29,3 +29,21 @@ fetch('https://factchecktools.googleapis.com/v1alpha1/claims:search?query=climat
   .then(response => response.json())
   .then(data => console.log(data.claims));
 
+
+  // here is for toggling the nav bar burger
+  const navbarToggler = document.querySelector('.navbar-toggler');
+  let dropdownToggle = document.querySelector('#dropdown-toggle');
+
+  navbarToggler.addEventListener('click', () => {
+    //Here we are using style.display - either block or none. The id #dropdown-toggle has 
+    //display: none; in the CSS, so it will show when clicked.
+    //the code is handling display none when clicked again.
+    dropdownToggle.style.display = dropdownToggle.style.display === 'block' ? 'none' : 'block';
+  });
+
+
+
+  //API KEY FOR LATER
+
+  //API_KEY=aa741301d76d449caf7c3db1fc865a2b
+  //PORT=3000
