@@ -102,18 +102,37 @@
     <div class="container">
       <h2>Welcome to Our Website</h2>
       <p>This is a sample HTML document with Bootstrap and Font Awesome integration.</p>
-      <button class="btn btn-primary"><i class="fas fa-thumbs-up"></i> Click Me!</button>
+      <div class="d-flex justify-content-center">
+        <!-- button centered for better ux -Jake -->
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Instructions
+        </button>
+      </div>
+
+      <!-- Modal added to the button for additional information on site features and uses -Jake -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Instructions/Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          All of the instructions and additional information will be provided here.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+          </div>
+        </div>
+      </div>
     </div>
     </main>
   <!-- End of main content body -->
 
     <!-- Article needs to sit outside of main so it can hug sides >< -->
     <!-- Article Section -->
-    <div class="space">
-    </div>
-    <div class="space">
-    </div>
-    <article class="our-article py-3">
+    <!-- Jake addded article class mt-2 for margin-top value of 2rem pushing article lower-->
+    <article class="our-article py-3 mt-2">
         <nav class="article-nav">
             <h2>Recent News on Geopolitics</h2>
         </nav>
