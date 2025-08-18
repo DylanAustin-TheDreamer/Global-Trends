@@ -241,6 +241,7 @@ Each article includes:
 - If a source link is broken or missing, a fallback message appears.
 - No layout issues occur when data is incomplete.
 
+=======
 ---
 
 ## Credits & Acknowledgments
@@ -260,3 +261,25 @@ Each article includes:
 - **VS Code**: Primary development environment.
 - **GitHub Pages**: Deployment platform.
 - **Browser DevTools**: Testing and debugging.
+
+-----------------------------------------------------------------------------------------------------------
+
+## Dylan
+
+## Project planning stages:
+
+- In the initial stages of our project - Valentyna and Jake had provided very detailed user stories.
+Together we created those user stories as 'To-do lists' on our Github project board; Giving them priority labels.
+
+- After we had our user stories to make a start, we had gone through each category and assigned ourselves
+to the tasks we felt we wanted to do.
+
+- Here is a screen shot of our project board on our first day!
+![alt text](image.png)
+
+
+## Technologies used:
+- Copilot: For helping us get set up with an API to use for our news project, and helping understand how this works.
+- We have also used copilot in helping resolve errors, and provide automatic code solutions based on intelicode in our IDE.
+
+## Errors & Fixes:
