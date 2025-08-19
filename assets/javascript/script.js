@@ -35,3 +35,34 @@ document.addEventListener('DOMContentLoaded', function() {
     //the code is handling display none when clicked again.
     dropdownToggle.style.display = dropdownToggle.style.display === 'block' ? 'none' : 'block';
   });
+
+
+  //
+
+  document.addEventListener('DOMContentLoaded', function() {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  window.changeSlide = function(n) {
+    let newIndex = currentSlide + n;
+    if (newIndex < 0) newIndex = slides.length - 1;
+    if (newIndex >= slides.length) newIndex = 0;
+    showSlide(newIndex);
+  };
+
+  window.currentSlideSet = function(n) {
+    showSlide(n - 1);
+  };
+
+  // Initialize
+  showSlide(0);
+});
