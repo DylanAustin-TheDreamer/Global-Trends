@@ -171,6 +171,11 @@ footer {
 }
 
 /* Optional: Header styling */
+/* Navbar logo size adjustment */
+.navbar-brand img {
+  height: 80px; /* Ensuring logo height is set to 80px for better visibility */
+  vertical-align: middle;
+}
 header {
   background-color: #004d00;
   color: white;
