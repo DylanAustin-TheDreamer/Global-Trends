@@ -1,3 +1,7 @@
+#adverts{
+    display: none;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -80,4 +84,80 @@ article, p{
   html body{
     padding: 0;
   }
+}
+
+@media (min-width: 768px) {
+  .our-article {
+    width: 75vw; /* Adjust width for larger screens */
+    margin: -5vw auto; /* Center the article */
+    height: 450px;
+    box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+  }
+  .our-article, p {
+    font-size: 18px;
+  }
+  .article-left {
+    height: 310px;
+    }
+
+.article-right {
+    height: 310px;
+    }
+}
+  @media screen and (min-width: 900px) {
+    .our-article {
+        width: 60vw; /* Further adjust width for even larger screens */
+        height: 500px;
+    }
+    .article-left {
+    height: 350px;
+    }
+
+.article-right {
+    height: 350px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .our-article {
+        width: 50vw; /* Adjust width for very large screens */
+        height: 600px;
+    }
+    .article-left {
+    height: 450px;
+    }
+    .article-right{
+        height: 450px;
+    }
+
+    #articles{
+        display: flex;
+        flex: 0;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    #adverts{
+        display: block;
+        margin-left: 80px
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .our-article {
+        width: 40vw; /* Adjust width for very large screens */
+        height: 700px;
+    }
+    .article-left {
+    height: 500px;
+    }
+    .article-right{
+        height: 500px;
+    }
+
+    #articles{
+        flex: 0;
+        gap: 1rem;
+    }
 }
