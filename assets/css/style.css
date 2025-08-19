@@ -36,14 +36,6 @@ header {
 }
 
 /* Main content grows to fill space */
-/* Make navbar logo bigger */
-.navbar-brand img {
-  height: 100px;
-  vertical-align: middle;
-}
-/* Main content also keeps what is within it, centered and stopped from touching sides.
-I advise keeping things like article and hero banner out of main for mobile view. 
-We can adjust their margin on higher breakpoints */
 main {
   flex: 1;
   padding: 1rem;
