@@ -301,18 +301,32 @@ textarea{
 @media screen and (min-width: 1440px){
     #hero {
       min-height: 450px;
+      margin-bottom: -40px;
+    }
+
+    .slideshow-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
     }
 
     .slide img{
-      object-fit: contain;
       max-height: 450px;
     }
     .slide{
+      object-position: center;
+      max-width: 1300px;
       background-color: #0c1b17;
     }
 
    .white-bg{
       margin-top: 55px;
+    }
+    main{
+      text-align: center;
+      width: 1300px;
+      margin: 0 auto;
     }
 }
 
@@ -321,10 +335,17 @@ textarea{
     .container.fact {
         margin-top: 1rem; 
    }
+   .slide{
+      background-color: #0c1b17;
+      margin-right: 12px;
+    }
+
    .white-bg{
       margin-top: 80px;
     }
     main{
       text-align: center;
+      width: 1300px;
+      margin: 0 auto;
     }
 }
