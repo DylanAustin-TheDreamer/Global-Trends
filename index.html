@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SEO Meta Tags -->
-  <title> Verified – News You Can Trust</title>
   <meta name="description" content="Global news and fact-checking site that verifies headlines for truth and emotional safety.">
   <meta name="keywords" content="fact check, news, verified news, truth, misinformation, fake check, safe news">
   <meta name="author" content="Code Institute students project">
@@ -92,8 +91,10 @@
     <!-- Main content - Keep hero and articles out of main for anti-margin purposes -->
     <main>
     <div class="container">
-      <h2>Welcome to Our Website</h2>
-      <p>This is a sample HTML document with Bootstrap and Font Awesome integration.</p>
+      <h2>Welcome to the source for clear news and verified facts.</h2>
+      
+      <p style="font-size: medium;">A real-time news and fact-checking platform
+         designed to empower users with verified information and combat misinformation.</p>
       <div class="d-flex justify-content-center">
         <!-- button centered for better ux -Jake -->
         <button class="btn btn-primary rounded-0 bg-transparent text-black border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Instructions
@@ -165,8 +166,8 @@
       <!-- Article Section -->
     
     <article class="our-article py-3 mt-2">
-        <nav class="article-nav">
-            <h2>Weather Forecast</h2>
+        <nav class="article-nav">  
+            <h2>Soft News</h2>
         </nav>
         <p>Will be sunny on Saturday</p>
 
@@ -177,6 +178,22 @@
             <div class="article-right">
                 
             </div>
+        </div>
+    </article>
+    <div class="space-above-article">
+    </div>
+
+    <!--Val: copied article-nav for styling -->
+        <article class="our-article py-3 mt-2">
+        <nav class="article-nav"> 
+          <h2>Your Local Weather</h2>
+        </nav>
+
+    <!--Val added weather for your location button-->     
+        <div> 
+          <br>
+        <button id="get-weather">Get Your Weather</button>
+        <p id="weather-output">Your weather will appear here.</p>
         </div>
     </article>
     <div class="space-above-article">
@@ -238,8 +255,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
     integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
     crossorigin="anonymous"></script>
-<!-- these links Val added for dropdown menu to work -->
-
 
   <!-- Our JavaScript -->
   <script src="assets/javascript/script.js"></script>
