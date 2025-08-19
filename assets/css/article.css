@@ -14,11 +14,9 @@ article, p{
     padding-top: 5px;
 }
 .our-article {
-    
-    border-radius: 15px;
-    background-color: #f3f0e4;
+    background-color: #8A9A7C;
     box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.1);
-    color: rgb(0, 0, 0);
+    color: white;
     width: 100vw;
     margin: -5vw auto;
     text-align: center;
@@ -31,31 +29,29 @@ article, p{
     align-items: center;
     width: 100%;
     height: auto;
-    background-color: #d8d2bb;
+    background-color: #1A3C34;
     z-index: 2;
     top: 1;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    border: solid 2px #e09239ea;
+    border: solid 2px #A14A2F;
 }
 
 .article-left {
     flex: 2;
     padding: 16px;
-    background-color: #d8d2bb;
+    background-color: #1A3C34;
     height: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    border: solid 2px #e09239ea;
+    border: solid 2px #A14A2F;
 }
 
 .article-right {
     flex: 1;
     padding: 16px;
-    background-color: #d8d2bb;
+    background-color: #1A3C34;
     height: 280px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    border: solid 2px #e09239ea;
+    border: solid 2px #A14A2F;
 }
 
 .flex-grid {
@@ -64,8 +60,12 @@ article, p{
     gap: 16px;
 }
 
-.space {
+.space-above-article {
     height: 25px;
+}
+
+.space-below-fact{
+    height: 2px;
 }
 
 @media (min-width: 320px) {

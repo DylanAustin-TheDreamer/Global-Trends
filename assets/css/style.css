@@ -1,3 +1,13 @@
+/*
+1A3C34 - green
+
+57585E - grey
+
+A14A2F - brown
+
+8A9A7C - battleshipgrey
+*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -166,7 +176,7 @@ main {
 
 /* Footer styling */
 footer {
-  background-color: #003300;
+  background-color: #1A3C34;
   color: white;
   text-align: center;
   padding: 0;
@@ -175,7 +185,7 @@ footer {
 
 /* Optional: Header styling */
 header {
-  background-color: #004d00;
+  background-color: #1A3C34;
   color: white;
   padding: 1rem;
   text-align: center;
@@ -205,6 +215,20 @@ quite like how you see the split between posts on facebook mobile */
 main {
   background-color: white;
   box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+  border-bottom: #1A3C34 solid 10px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* for the white background for cards - we also have box shadow and border bottom
+to split up the articles whilst keeping them visually distinct */
+.white-bg {
+  background-color: white;
+  box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  padding: 1rem;
+  font-size: 11px;
+  border-bottom: #1A3C34 solid 10px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.3);
 }
 
 #dropdown-toggle {
