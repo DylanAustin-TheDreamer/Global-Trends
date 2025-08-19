@@ -235,6 +235,12 @@ to split up the articles whilst keeping them visually distinct */
   display: none;
 }
 
+textarea{
+  width: 100%;
+  color: whitesmoke;
+  background-color: darkslategray;
+}
+
 /* The media queries */
 @media (min-width: 320px) {
   .container {
