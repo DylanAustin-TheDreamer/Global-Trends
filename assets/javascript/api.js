@@ -1,11 +1,11 @@
 // Example fetch request (replace YOUR_API_KEY with your actual key)
 
-fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=aa741301d76d449caf7c3db1fc865a2b')
+fetch('http://api.mediastack.com/v1/news?access_key=4d98c12ac047854b3b29580bd299b99f&countries=us&limit=5')
   .then(response => response.json())
   .then(data => {
     // Example: display the first article
-    const article = data.articles[2];
-    document.getElementById('news-title').textContent = article.source.name;
+    const article = data.data[2];
+    document.getElementById('news-title').textContent = "Trendy News";
     document.getElementById('news-subtitle').textContent = article.title;
     
     const mainText = article.content || article.description || 'No main text available';
@@ -17,7 +17,8 @@ fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=aa741301d76d449caf
 
   //API KEY FOR LATER
 
-  //API_KEY=aa741301d76d449caf7c3db1fc865a2b
+  //API_KEY=aa741301d76d449caf7c3db1fc865a2b  for newsapi.org
+  //API_KEY=4d98c12ac047854b3b29580bd299b99f  for mediastack
   //PORT=3000
 
   // Replace with your actual API endpoint
