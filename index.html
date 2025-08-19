@@ -30,12 +30,12 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">LOGO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
+
+          <!-- We are using custom toggling now with JS -->
+          <button class="navbar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div id="dropdown-toggle" class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#articles">Articles</a>
@@ -43,21 +43,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="#social-networks">Contacts</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">UK News</a></li>
-                  <li><a class="dropdown-item" href="#">Geopolitics</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Technology</a></li>
-                </ul>
-              </li>
+                  <li class="nav-item"><a class="nav-link" href="#">UK News</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Geopolitics</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
             </ul>
+            <!-- end of nav lists -->
+
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button class="btn btn-outline-success" type="submit">Search</button>
@@ -104,7 +95,7 @@
       <p>This is a sample HTML document with Bootstrap and Font Awesome integration.</p>
       <div class="d-flex justify-content-center">
         <!-- button centered for better ux -Jake -->
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Instructions
+        <button class="btn btn-primary rounded-0 bg-transparent text-black border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Instructions
         </button>
       </div>
 
@@ -114,13 +105,13 @@
           <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Instructions/Information</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close rounded-0" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           All of the instructions and additional information will be provided here.
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Close</button>
         </div>
           </div>
         </div>
@@ -132,25 +123,28 @@
     <!-- Article needs to sit outside of main so it can hug sides >< -->
     <!-- Article Section -->
     <!-- Jake addded article class mt-2 for margin-top value of 2rem pushing article lower-->
-     <!-- Added d-flex justify-content-center to center the article -->
+
+     <!-- Dylan: I feel that space works better here then py-3 mt-2 for second article -->
+     <div class="space-above-article"></div>
+     <!-- Jake: Added d-flex justify-content-center to center the article -->
     <div class ="container d-flex justify-content-center" id="articles">
       <div>
-    <article class="our-article py-3 mt-2">
+    <article class="our-article">
         <nav class="article-nav">
             <h2>Recent News on Geopolitics</h2>
         </nav>
         <p>Sand Dunes in the Middle East</p>
 
         <div class="flex-grid">
-            <div class="article-left">
-                
+            <div class="article-left text-center" style="display: flex; flex-wrap: wrap;">
+                <textarea>This is the text area</textarea>
             </div>
             <div class="article-right">
                 
             </div>
         </div>
     </article>
-    <div class="space">
+    <div class="space-above-article">
     </div>
     <!-- End of article section-->
 
@@ -158,46 +152,47 @@
 
 
     <!-- <main> isn't main should be only one? -->
+      <!-- you are right for semantics - added div with class instead -->
+    <div class="white-bg">
       <div class="container fact">
       </div>
-    <!-- </main> -->
-     <div class="space">
+    </div>
+  
+     <div class="space-below-fact">
      </div>
      <!-- end of JS append article-->
+
+
       <!-- Article Section -->
-    <div class="space">
-    </div>
-    <div class="space">
-    </div>
-    <article class="our-article py-3">
+    
+    <article class="our-article py-3 mt-2">
         <nav class="article-nav">
             <h2>Weather Forecast</h2>
         </nav>
         <p>Will be sunny on Saturday</p>
 
         <div class="flex-grid">
-            <div class="article-left">
-                
+            <div class="article-left text-center" style="display: flex; flex-wrap: wrap;">
+                <textarea>This is the text area</textarea>
             </div>
             <div class="article-right">
                 
             </div>
         </div>
     </article>
-    <div class="space">
+    <div class="space-above-article">
     </div>
     </div>
   </div>
     <!-- End of article section-->
 
     <!-- Add the JS append article -->
-
-    <!-- <main> another additional main? -->
+    <div class="white-bg">
       <div class="container fact">
       </div>
-     <!-- </main> -->
+    </div>
 
-     <div class="space">
+     <div class="space-above-article">
      </div>
      <!-- end of JS append article-->
 
