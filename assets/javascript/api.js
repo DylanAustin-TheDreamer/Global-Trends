@@ -1,7 +1,7 @@
 // Example fetch request (replace YOUR_API_KEY with your actual key)
 
 //api and url to paste in fetch for newsapi.org -- https://newsapi.org/v2/top-headlines?country=us&apiKey=aa741301d76d449caf7c3db1fc865a2b
-fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9f45da26')
+fetch('https://gnews.io/api/v4/search?q=politics&token=2fc6e388cd16c58e7ee1d222b9ed381c')
   .then(response => response.json())
   .then(data => {
     const article = data.articles && data.articles[1];
@@ -43,7 +43,9 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
   //--------------------------------------------------------------------------------------------------------
 
   //API KEY FOR LATER
+  //Jakes GNews API_KEY = 2fc6e388cd16c58e7ee1d222b9ed381c
   //Gnews URL for roll out - https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9f45da26
+  //--------------------------------------------------------------------------------------------------------
   //API_KEY=55304aed27cb98d5cbe761bd9f45da26  for Gnews - current one in use
   //API_KEY=aa741301d76d449caf7c3db1fc865a2b  for newsapi.org
   //API_KEY=4d98c12ac047854b3b29580bd299b99f  for mediastack

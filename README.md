@@ -277,9 +277,22 @@ to the tasks we felt we wanted to do.
 - Here is a screen shot of our project board on our first day!
 ![alt text](image.png)
 
+## Deeper into the project
+- on our third day we had gone through a lot of work, and we now have an MVP and we are working on could have features
+![alt text](image-1.png)
+
+## Later in the day
+![alt text](image-2.png)
 
 ## Technologies used:
 - Copilot: For helping us get set up with an API to use for our news project, and helping understand how this works.
 - We have also used copilot in helping resolve errors, and provide automatic code solutions based on intelicode in our IDE.
 
 ## Errors & Fixes:
+- Extensive errors with getting API's to work and we had copilot help us understand URLs and stating our queries for information.
+- Errors with CSS layout design, and we had come up with creative solutions to do with flex dividers, bootstrap margins and our own
+created dividers with a fixed height
+- We have had several scripts such as the search bar script, to be worked on together in order solve certain bugs like clearing
+article information when we didn't want that to happen.
+- Valentyna had mentioned she had some trouble getting the CSS to work for her trending claims container, and I had advised her on
+how to set up display: none; before media queries, and I had fixed her JS syntax on the api.js. The functions were not properly closed.
