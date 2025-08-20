@@ -11,6 +11,9 @@ A14A2F - brown
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+#articles{
+  gap: 10px;
+}
 
 /* Val - Headings for visual hierarchy */
 h1 {
@@ -42,17 +45,14 @@ body {
 header {
   margin-bottom: 0;
   padding-bottom: 0;
+  margin: 0 ;
 }
 
 /* Main content grows to fill space */
 /* Main content also keeps what is within it, centered and stopped from touching sides.
 I advise keeping things like article and hero banner out of main for mobile view. 
 We can adjust their margin on higher breakpoints */
-main {
-  flex: 1;
-  padding: 1rem;
-  font-size: 11px;
-}
+
 
 /* Hero Section Styles */
 .hero-section {
@@ -211,16 +211,12 @@ html body {
 
 /* Adding a nice solid white color, and really thin and subtle box shadow for depth.
 quite like how you see the split between posts on facebook mobile */
-
-main {
-  background-color: white;
-  box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
-  border-bottom: #1A3C34 solid 10px;
-  box-shadow: 0 5px rgba(0, 0, 0, 0.3);
+.home{
+  height: auto;
 }
-
 /* for the white background for cards - we also have box shadow and border bottom
 to split up the articles whilst keeping them visually distinct */
+
 .white-bg {
   background-color: white;
   box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
@@ -229,7 +225,9 @@ to split up the articles whilst keeping them visually distinct */
   font-size: 11px;
   border-bottom: #1A3C34 solid 10px;
   box-shadow: 0 5px rgba(0, 0, 0, 0.3);
+  margin-top: 0;
 }
+/*---------------------------------------------------------------------------------*/
 
 #dropdown-toggle {
   display: none;
@@ -242,23 +240,18 @@ to split up the articles whilst keeping them visually distinct */
 }
 
 /* For The Trending Claims */
-  #gap{
-    display: none;
-    padding-left: 10px;
-    flex: 1;
-  }
   #trending-claims-column {
     display: none;
     height: 100%; 
     text-align: center; 
-    width: 400px;
+    width: 100%;
     color: whitesmoke;
     background-color: darkslategray;
     border: solid 2px #A14A2F;
     padding: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   }
-  #trending-false-card{
+  .trending-false-card{
     display: none; /* Hidden by default */
     margin-top: 25px;
     border: solid 2px #A14A2F;
@@ -308,7 +301,7 @@ to split up the articles whilst keeping them visually distinct */
     }
     /* Dylan: For the fact cards*/
     .white-bg{
-      margin-top: 25px;
+      margin-top: 0;
       box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
       border-bottom: #1A3C34 solid 18px;
     }
@@ -317,7 +310,6 @@ to split up the articles whilst keeping them visually distinct */
       font-size: 20px;
     }
 }
-
 
 /* Dylan changed values to 1024px*/
 /* Val: Large devices (laptops, 1024px and up) */
@@ -328,15 +320,14 @@ to split up the articles whilst keeping them visually distinct */
     display: block;
     width: 100%;
     align-items: center;
+    min-height: 100vh;
   }
-  #trending-false-card {
+  .trending-false-card {
     display: block;
-    width: 400px;
+    width: 350px;
     margin: 0 auto;
   }
-  #gap{
-    display: block;
-  }
+  
     #hero {
         min-height: 450px;
     }
@@ -344,9 +335,9 @@ to split up the articles whilst keeping them visually distinct */
         margin-top: 1rem; 
    }
    .white-bg{
-      margin-top: 35px;
+      margin-top: 0;
     }
-    main{
+    .home{
       text-align: center;
     }
 }
@@ -375,9 +366,9 @@ to split up the articles whilst keeping them visually distinct */
     }
 
    .white-bg{
-      margin-top: 55px;
+      margin-top: 0;
     }
-    main{
+    .home{
       text-align: center;
       width: 1300px;
       margin: 0 auto;
@@ -396,9 +387,9 @@ to split up the articles whilst keeping them visually distinct */
     }
 
    .white-bg{
-      margin-top: 80px;
+      margin-top: 0;
     }
-    main{
+    .home{
       text-align: center;
       width: 1300px;
       margin: 0 auto;
