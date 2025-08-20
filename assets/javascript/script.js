@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
       factCard.className = 'fact-card';
       factCard.innerHTML = `
       <h2>Claim: <span style="font-size: 20px; font-weight: 500;">(Since last checked)</span></h2>
-      <h6><strong>Verdict -</strong> <span style="font-size: 16px; font-weight: 500;">False</span></h6>
-      <h6><strong>Source -</strong> <span style="font-size: 16px; font-weight: 500;"><a href="#">Example News</a></span></h6>
-      <h6><strong>Checked on -</strong> <span style="font-size: 16px; font-weight: 500;">August 15, 2025</span></h6>
+      <h6 id="verdict"><strong>Verdict -</strong> <span style="font-size: 16px; font-weight: 500;">False</span></h6>
+      <h6 id="source"><strong>Source -</strong> <span style="font-size: 16px; font-weight: 500;"><a href="#">Example News</a></span></h6>
+      <h6 id="checked-on"><strong>Checked on -</strong> <span style="font-size: 16px; font-weight: 500;">August 15, 2025</span></h6>
     `;
     article.appendChild(factCard);
     }

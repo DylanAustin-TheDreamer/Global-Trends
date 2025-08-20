@@ -1,21 +1,49 @@
 // Example fetch request (replace YOUR_API_KEY with your actual key)
 
+//api and url to paste in fetch for newsapi.org -- https://newsapi.org/v2/top-headlines?country=us&apiKey=aa741301d76d449caf7c3db1fc865a2b
 fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9f45da26')
   .then(response => response.json())
   .then(data => {
-    const article = data.articles && data.articles[0];
+    const article = data.articles && data.articles[1];
     if (article) {
       document.getElementById('news-title').textContent = article.source.name || "Trendy News";
       document.getElementById('news-subtitle').textContent = article.title;
       document.getElementById('news-main').value = article.description || 'No main text available';
     }
+    else{
+      document.getElementById('news-title').textContent = "No source available at this time.";
+      document.getElementById('news-subtitle').textContent = "No title available at this time.";
+      document.getElementById('news-main').value = 'No main text available at this time';
+
+      //for fact cards
+      document.getElementById('source').innerHTML = "<strong>Source: </strong>" + "No source available at this time.";
+      document.getElementById('checked-on').innerHTML = "<strong>Checked on: </strong>" + new Date().toLocaleDateString();
+      document.getElementById('verdict').innerHTML = "<strong>Verdict: </strong>Unknown Source";
+    }
+
+    //----- This section below is for the fact card API
+  let source = document.getElementById('source').innerHTML = "<strong>Source: </strong>" + `<a href="${article.source.url}" target="_blank">${article.source.name}</a>` || "unknown";
+  document.getElementById('checked-on').innerHTML = "<strong>Checked on: </strong>" + new Date().toLocaleDateString();
+
+  trueOrFalse();
+  //Here is a function to determine the verdict based on whether there is a source for the article
+  function trueOrFalse() {
+
+      if (article.source.name == false) {
+        document.getElementById('verdict').innerHTML = "<strong>Verdict: </strong>Unknown Source";
+      } else {
+        document.getElementById('verdict').innerHTML = "<strong>Verdict: </strong>Known Source" + '<img src="https://img.icons8.com/?size=100&id=15427&format=png&color=000000" style="width: 35px; height: auto; padding-left: 10px;">';
+      }
+
+    }
+
   })
   .catch(error => console.error('Error:', error));
 
-    
+  //--------------------------------------------------------------------------------------------------------
 
   //API KEY FOR LATER
-
+  //Gnews URL for roll out - https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9f45da26
   //API_KEY=55304aed27cb98d5cbe761bd9f45da26  for Gnews - current one in use
   //API_KEY=aa741301d76d449caf7c3db1fc865a2b  for newsapi.org
   //API_KEY=4d98c12ac047854b3b29580bd299b99f  for mediastack
@@ -25,8 +53,13 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
 
 
 
+//----------------------------------------------------------------------------------------------------------
+
   // Val: OpenWeather 
   // API key ec7c301c0742903143627a2e2a68544a
+
+
+
 
   // Function to fetch and display weather
   function fetchAndDisplayWeather() {
