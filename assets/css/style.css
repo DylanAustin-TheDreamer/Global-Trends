@@ -123,38 +123,6 @@ main {
   animation: fade 1s;
 }
 
-/* Navigation Arrows */
-.slide-prev, .slide-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-  z-index: 4;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.slide-prev {
-  left: 20px;
-  border-radius: 0 3px 3px 0;
-}
-
-.slide-next {
-  right: 20px;
-  border-radius: 3px 0 0 3px;
-}
-
-.slide-prev:hover, .slide-next:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-
 /* Dots Indicators */
 .slide-dots {
   position: absolute;
