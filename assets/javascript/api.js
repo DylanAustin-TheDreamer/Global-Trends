@@ -43,6 +43,7 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
     
 
   //API KEY FOR LATER
+  //Jakes API = 2fc6e388cd16c58e7ee1d222b9ed381c
   //Gnews URL for roll out - https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9f45da26
   //API_KEY=55304aed27cb98d5cbe761bd9f45da26  for Gnews - current one in use
   //API_KEY=aa741301d76d449caf7c3db1fc865a2b  for newsapi.org
@@ -214,7 +215,7 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
 
   // --- Val: Trending False Claims ---
   function renderTrendingFalseCard(claims) {
-    const container = document.getElementById("trending-false-card");
+    let container = document.querySelector(".trending-false-card");
     if (!container) {
         console.warn("Trending false card container not found.");
         return;

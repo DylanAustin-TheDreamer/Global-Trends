@@ -1,10 +1,11 @@
-﻿# Global-Trends
+﻿# Truthful News
 
-## Welcome to Global Trends
+![Built with HTML/CSS/JS](https://img.shields.io/badge/Built%20with-HTML%2FCSS%2FJS-blue)
+![WCAG Compliant](https://img.shields.io/badge/WCAG-Compliant-brightgreen)
+![Hackathon Project](https://img.shields.io/badge/Hackathon-Project-orange)
 
-Global Trends is your beginner-friendly source for clear news and verified facts. This project was developed as part of a hackathon initiative to combat misinformation and promote media literacy in the digital age.
-
-We help users stay informed with short, easy-to-read updates and a simple tool to check whether headlines and viral claims are true. Whether you're new to online news, learning English, or just want reliable information, our site is designed to support your curiosity and critical thinking. Accessible on any device, anytime.
+## Welcome to Truthful News
+**Truthful News** is a hackathon-built platform providing clear, verified, and trending news to combat misinformation and promote media literacy. With short updates and tools to verify headlines, it empowers users—whether beginners or critical thinkers—to navigate current events confidently. Accessible anytime, on any device.
 
 **Purpose:** A real-time news and fact-checking platform designed to empower users with verified information and combat misinformation through clear, accessible content display.
 
@@ -21,42 +22,32 @@ We help users stay informed with short, easy-to-read updates and a simple tool t
 - **Critical Thinking Support**: Tools to question sources and think critically.
 - **Mobile Access**: Responsive design for any device, anytime.
 - **Community Value**: Empowers informed decisions and sharing of reliable content.
+- **Real-Time Updates**: Stay informed with the latest verified news as it happens.
+- **Customizable Experience**: Filter news by topics, regions, or sources to suit your interests.
+- **Enhanced Accessibility**: Designed with WCAG compliance for users with disabilities.
+- **Data Privacy**: No intrusive tracking or data collection, ensuring user trust and security.
+- **Global Perspective**: Access news from diverse sources worldwide for a well-rounded view.
 
 ---
 
-## Technologies
+## Why It Matters
 
-### Frontend
-- **HTML5**: Semantic structure for accessibility.
-- **CSS Grid/Flexbox**: Responsive layouts for all devices.
-- **JavaScript (Vanilla)**: Dynamic content manipulation and interactivity.
-- **Mobile-First Design**: Ensures usability across all screen sizes.
+In today’s digital age, misinformation spreads rapidly, influencing public opinion and decision-making. Media literacy is essential to:
 
-### APIs
-- **NewsAPI**: Fetches headlines from major sources worldwide.
-- **Google Fact Check Tools**: Searches claims and fact-checks from verified sources.
+- **Combat Misinformation**: Equip users with tools to verify claims and identify false narratives.
+- **Promote Critical Thinking**: Encourage questioning of sources and deeper analysis of information.
+- **Foster Trust in Media**: Build confidence in reliable news sources through transparency and fact-checking.
+- **Empower Communities**: Enable informed decision-making and responsible content sharing.
 
-### Images & Media
-- **Responsive Image Optimization**: Ensures fast loading and scalability.
-- **SVG Icons**: Scalable graphics for modern interfaces.
-- **WebP Format Support**: Optimized images for modern browsers.
-
-### Development Tools
-- **Git**: Version control with branch-based workflow.
-- **GitHub**: Collaborative development and deployment via GitHub Pages.
-- **VS Code**: Primary development environment with GitHub Copilot for AI-assisted coding.
-
-### Key Design Decisions
-- **Static Site Approach**: Pure HTML/CSS/JS for fast loading and easy deployment.
-- **State Management**: Simple DOM manipulation with event-driven card lifecycle management.
-- **Modular Design**: Separate components for cards, alerts, and filters, enabling easy maintenance.
-- **Accessibility-First**: Semantic HTML and ARIA roles implemented from the initial development phase.
+Truthful News addresses these challenges by providing a platform that prioritizes accuracy, accessibility, and user empowerment.
 
 ---
 
 ## User Stories
 
-### 🧠 Political Awareness & Truth-Seeking
+<details>
+<summary>🧠 Political Awareness & Truth-Seeking</summary>
+
 As a politically aware user, I want to compare multiple sources and see fact-checks with timestamps so that I can judge credibility and spot manipulation.
 
 **Tasks**
@@ -69,9 +60,11 @@ As a politically aware user, I want to compare multiple sources and see fact-che
 - JavaScript to fetch and display data from a fact-check API.
 - CSS grid or flexbox for side-by-side comparison.
 
----
+</details>
 
-### 📱 Mobile-Friendly Access
+<details>
+<summary>📱 Mobile-Friendly Access</summary>
+
 As a mobile user, I want the site to work well on my phone so that I can read and verify facts wherever I am.
 
 **Tasks**
@@ -84,9 +77,11 @@ As a mobile user, I want the site to work well on my phone so that I can read an
 - Mobile-first layout using Flexbox or Grid.
 - Scalable font sizes and tap-friendly buttons.
 
----
+</details>
 
-### 🧾 Clear Language & Guidance
+<details>
+<summary>🧾 Clear Language & Guidance</summary>
+
 As a non-native speaker or beginner, I want simple instructions and clear language so that I can understand how to use the site and trust the content.
 
 **Tasks**
@@ -99,9 +94,11 @@ As a non-native speaker or beginner, I want simple instructions and clear langua
 - CSS styling for readability (font size, spacing).
 - JavaScript tooltips or collapsible help boxes.
 
----
+</details>
 
-### ⚠️ Misinformation Awareness
+<details>
+<summary>⚠️ Misinformation Awareness</summary>
+
 As a concerned citizen, I want to know when fake news is trending so that I can avoid sharing harmful content that could mislead others.
 
 **Tasks**
@@ -114,9 +111,11 @@ As a concerned citizen, I want to know when fake news is trending so that I can 
 - CSS styling for alert boxes and badges (e.g., “False”, “Verified”).
 - HTML buttons with navigator.share() or copy-to-clipboard.
 
----
+</details>
 
-### 🔍 Search & Filtering
+<details>
+<summary>🔍 Search & Filtering</summary>
+
 As a user, I want to search for specific claims or topics so I can find relevant information quickly.
 
 **Acceptance Criteria**
@@ -131,9 +130,11 @@ As a user, I want to search for specific claims or topics so I can find relevant
 - Highlight matches in result text.
 - Implement autocomplete (optional).
 
----
+</details>
 
-### 🖼️ Detailed Claim View
+<details>
+<summary>🖼️ Detailed Claim View</summary>
+
 As a user, I want to click on a claim and view full details so I can understand the context and verification process.
 
 **Acceptance Criteria**
@@ -148,9 +149,11 @@ As a user, I want to click on a claim and view full details so I can understand 
 - Implement share and permalink logic.
 - Add breadcrumb or back button.
 
----
+</details>
 
-### 👓 Accessibility & Readability
+<details>
+<summary>👓 Accessibility & Readability</summary>
+
 As a visually sensitive user, I want clear contrast and readable fonts so I can comfortably consume content.
 
 **Acceptance Criteria**
@@ -163,94 +166,90 @@ As a visually sensitive user, I want clear contrast and readable fonts so I can 
 - Add ARIA labels and semantic tags.
 - Implement navigation bar.
 
----
-
-## Development Decisions
-
-This section documents key decisions made during the development process:
-
-- **Design Choices**: Rationale behind layout, color schemes, and typography.
-- **Feature Prioritization**: Why certain features were implemented first.
-- **Technical Challenges**: Issues encountered and how they were resolved.
-- **User Feedback**: How user testing influenced design and functionality.
-
-After deciding that our website would deliver trending world news and fact-check this information for trustability, we:
-
-1. Designed wireframes and selected a color palette to enhance accessibility and user experience.
-2. Created boilerplate code and conceptual designs using VS Code.
-3. Implemented features such as:
-   - **Truth-seeking Cards**: Dynamic fact cards with verified claims, verdict badges, source links, and timestamps.
-   - **Mobile-first Responsive Layout**: CSS Grid/Flexbox with touch-friendly interface across all devices.
-   - **Accessibility-first Design**: Semantic HTML, ARIA roles, keyboard navigation, and WCAG compliance.
-   - **Interactive JavaScript Components**: Dynamic content generation and user interface management.
-   - **Responsive Image System**: Optimized images that scale across all device sizes.
-   - **Modular CSS Architecture**: Organized stylesheets for maintainable design system.
+</details>
 
 ---
 
-## Testing Checklists
+## Website Planning and Construction
 
-### News API Testing Checklist ✅
+### Concept Discussion
 
-#### 🔧 Functionality
-- The API key is valid and securely stored (not exposed in public files).
-- The site successfully fetches news articles using the News API.
-- At least 5 headlines are displayed on page load.
+Before diving into the development process, the team held a brainstorming session to discuss the concept of the site and its key features. This session helped align our goals and define the core functionalities of the platform, ensuring that the final product would meet user needs effectively.
 
-Each article includes:
-- Title
-- Source name
-- Published date
-- Link to full article
+<details>
+<summary>🧠 Concept Brainstorming</summary>
 
-#### 🔍 Search & Filtering
-- Users can enter a keyword and see relevant articles.
-- Search results update without refreshing the page.
-- Results are sorted by relevance or popularity.
+- **Concept Overview**: The site would serve as a real-time news and fact-checking platform, focusing on accessibility, reliability, and user engagement.
+- **Key Features Discussed**:
+  - Trending news updates.
+  - Fact-checking tools for viral claims.
+  - Mobile-first design for accessibility.
+  - Tools to promote critical thinking and media literacy.
 
-#### 📱 Responsive Design
-- News cards display correctly on mobile, tablet, and desktop.
-- Font sizes and images scale properly on smaller screens.
-- Buttons and links are easy to tap on mobile.
+![Concept Brainstorming](assets/Readme-images/concept.png)
 
-#### ⚠️ Error Handling
-- A loading message or spinner appears while fetching articles.
-- If the API fails, a clear error message is shown.
-- If no results are found, a “No articles found” message appears.
-
-#### ♿ Accessibility & Usability
-- All links open in a new tab and use target="_blank" with rel="noopener".
-- Semantic HTML tags are used (e.g., `<article>`, `<h2>`, `<a>`).
-- Each news card has readable contrast and clear layout.
+</details>
 
 ---
 
-### Fact-Check Functionality Testing Checklist
+### 🗂️ Project Planning Stages
 
-#### 🔧 Core Functionality
-- Fact-check cards are visible on the page.
-- Each card includes:
-  - A clear claim or statement.
-  - A verdict (e.g., True, False, Misleading).
-  - A source link that opens in a new tab.
-  - A timestamp showing when it was checked.
-- Multiple fact-check cards are displayed side-by-side or stacked responsively.
+### Team Collaboration and Task Management
 
-#### ⚠️ Error Handling & Placeholder Content
-- If no fact-check data is available, placeholder content is shown.
-- If a source link is broken or missing, a fallback message appears.
-- No layout issues occur when data is incomplete.
+Dylan took on a leadership role, overseeing the project board and ensuring tasks were well-organized and progress was effectively tracked. At the project's outset, Valentyna and Jake contributed by drafting detailed user stories. Together, the team transformed these user stories into actionable "To-Do" items on the GitHub project board, assigning priority labels to each task. Once the tasks were structured, team members selected and assigned themselves to the ones they were most eager to tackle.
 
-=======
+<details>
+<summary>📋 Project Board Snapshots</summary>
+
+- **First Day**: Initial planning and task assignment.
+  ![Project Board - Day 1](assets/Readme-images/image.png)
+- **Third Day**: Significant progress with an MVP ready and work on additional features underway.
+  ![Project Board - Day 3](assets/Readme-images/image-1.png)
+- **Later Progress**: Continued refinement and feature development.
+  ![Project Board - Later Progress](assets/Readme-images/image-2.png)
+
+</details>
+
+---
+
+### 🎨 Wireframes and Design
+
+The wireframes were designed by Daniel, who focused on creating layouts that enhance accessibility and user experience. These wireframes guided the development process and ensured alignment with our goals.
+
+<details>
+<summary>🖼️ Wireframes</summary>
+
+- **Wireframe 1**: Initial layout concept for the homepage, focusing on navigation and content placement.
+  ![Wireframe 1](assets/Readme-images/wireframe.png)
+- **Wireframe 2**: Detailed design for the fact-checking section, emphasizing user interaction and clarity.
+  ![Wireframe 2](assets/Readme-images/wireframe2.png)
+- **Wireframe 3**: Mobile-first design showcasing responsive elements and simplified navigation.
+  ![Wireframe 3](assets/Readme-images/wireframe3.png)
+
+</details>
+
+---
+
+### Technologies Used
+
+- **GitHub Copilot**: Assisted in setting up APIs, resolving errors, and providing automatic code solutions based on IntelliCode.
+- **CSS Layout Design**: Creative solutions using flex dividers, bootstrap margins, and custom dividers with fixed heights.
+- **JavaScript Debugging**: Collaborative debugging of scripts like the search bar to resolve issues such as unintended clearing of article information.
+- **API Integration**: Extensive errors with getting APIs to work were resolved with the help of GitHub Copilot, which assisted in understanding URLs and query structures.
+- **Responsive Design**: Ensured proper display on mobile, tablet, and desktop devices using CSS Grid/Flexbox and media queries.
+- **Accessibility-First Approach**: Implemented semantic HTML, ARIA roles, and WCAG compliance to enhance usability for all users.
+
+---
+
+### Errors and Fixes
+
+- **API Integration**: Extensive errors with getting APIs to work were resolved with the help of GitHub Copilot, which assisted in understanding URLs and query structures.
+- **CSS Troubleshooting**: Valentyna faced issues with the trending claims container, which were resolved by adjusting `display: none;` before media queries and fixing JS syntax errors. Additionally, a class selector was mistakenly used instead of an ID selector, which was corrected.
+- **JavaScript Debugging**: Several scripts, such as the search bar script, were collaboratively debugged to fix issues like clearing article information unintentionally.
+![alt text](assets/Readme-images/image-3.png)
 ---
 
 ## Credits & Acknowledgments
-
-### Team Members
-- **Dylan Austin** - [Contribution details to be added]
-- **Jakey Marsh** - [Contribution details to be added]
-- **Daniel Carson** - [Contribution details to be added]
-- **Valantyna** - [Contribution details to be added]
 
 ### Design Resources
 - **Google Fonts**: Typography and font resources.
@@ -262,39 +261,5 @@ Each article includes:
 - **GitHub Pages**: Deployment platform.
 - **Browser DevTools**: Testing and debugging.
 
------------------------------------------------------------------------------------------------------------
-
-## Dylan
-
-## Project planning stages:
-
-- In the initial stages of our project - Valentyna and Jake had provided very detailed user stories.
-Together we created those user stories as 'To-do lists' on our Github project board; Giving them priority labels.
-
-- After we had our user stories to make a start, we had gone through each category and assigned ourselves
-to the tasks we felt we wanted to do.
-
-- Here is a screen shot of our project board on our first day!
-![alt text](image.png)
-
-## Deeper into the project
-- on our third day we had gone through a lot of work, and we now have an MVP and we are working on could have features
-![alt text](image-1.png)
-
-## Later in the day
-![alt text](image-2.png)
-
-## Technologies used:
-- Copilot: For helping us get set up with an API to use for our news project, and helping understand how this works.
-- We have also used copilot in helping resolve errors, and provide automatic code solutions based on intelicode in our IDE.
-
-## Errors & Fixes:
-- Extensive errors with getting API's to work and we had copilot help us understand URLs and stating our queries for information.
-- Errors with CSS layout design, and we had come up with creative solutions to do with flex dividers, bootstrap margins and our own
-created dividers with a fixed height
-- We have had several scripts such as the search bar script, to be worked on together in order solve certain bugs like clearing
-article information when we didn't want that to happen.
-- Valentyna had mentioned she had some trouble getting the CSS to work for her trending claims container, and I had advised her on
-how to set up display: none; before media queries, and I had fixed her JS syntax on the api.js. The functions were not properly closed.
-it also turned out that Val was trying to call an element with an ID by a class selector. 
-![alt text](image-3.png)
+## LightHouse Scores
+![alt text](assets/Readme-images/image-7.png)

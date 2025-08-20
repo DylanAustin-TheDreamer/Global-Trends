@@ -33,10 +33,10 @@
       <!-- Sample of navbar with Search functionality -->
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" style="width: 60px; height: auto;"></a>
+          <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Image of a tick" style="width: 60px; height: auto;"></a>
 
           <!-- We are using custom toggling now with JS -->
-          <button class="navbar-toggler" type="button">
+          <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div id="dropdown-toggle" class="collapse navbar-collapse">
@@ -55,8 +55,8 @@
             <!-- end of nav lists -->
 
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button id="search-results" class="btn btn-outline-success" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button id="search-results" class="btn btn-outline-success" type="submit" aria-label="submit Search">Search</button>
             </form>
           </div>
         </div>
@@ -71,12 +71,12 @@
         <div class="slide fade-slide active">
           <img src="assets/images/earthimage.webp"
             alt="Earth floating in the darkness of space, showing swirling white clouds over blue oceans and brown continents, with no visible text, conveying a sense of isolation and tranquility"
-            class="earth-image" area-label="Earth Image">
+            class="earth-image">
         </div>
         <div class="slide fade-slide">
           <img src="assets/images/worldhistory.webp"
             alt="A mural-style illustration showing key moments and figures from world history, including ancient pyramids, explorers on a sailing ship, inventors with a printing press, soldiers, scientists, and modern technology like satellites and wind turbines. The background features a globe and a warm, inspirational atmosphere. The text History of the World appears at the top in large gold letters."
-            class="world-history-image" area-label="World History Image">
+            class="world-history-image">
         </div>
 
          <!-- Navigation arrows -->
@@ -95,15 +95,17 @@
 
     <!-- Main content - Keep hero and articles out of main for anti-margin purposes -->
     <main>
-    <div class="container">
+      <section class="white-bg home">
+      <div class="container">
       <h2>Welcome to the source for clear news and verified facts.</h2>
       
       <p style="font-size: medium;">A real-time news and fact-checking platform
          designed to empower users with verified information and combat misinformation.</p>
+         
       <div class="d-flex justify-content-center">
 
         <!-- button centered for better ux -Jake -->
-        <button class="btn btn-primary rounded-0 bg-transparent text-black border-dark" data-bs-toggle="modal" data-bs-target="#guidanceModal">Guidance <i class="fa fa-info-circle" aria-hidden="true"></i>
+        <button class="btn btn-primary rounded-0 bg-transparent text-black border-dark" data-bs-toggle="modal" data-bs-target="#guidanceModal" aria-label="Guidance information">Guidance <i class="fa fa-info-circle" aria-hidden="true"></i>
         </button>
       </div>
 
@@ -130,13 +132,14 @@
               </ul>
             </div>
             <div class="modal-footer justify-content-center">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close guidance modal">Close</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    </main>
+    </section>
+
   <!-- End of main content body -->
 
     <!-- Article needs to sit outside of main so it can hug sides >< -->
@@ -222,7 +225,7 @@
     <!--Val added weather for your location button-->     
         <div> 
           <br>
-        <button id="get-weather">Get Your Weather</button>
+        <button id="get-weather" aria-label="Get your local weather">Get Your Weather</button>
         <p id="weather-output">Your weather will appear here.</p>
         </div>
     </article>
@@ -230,28 +233,28 @@
 
       <!-- Here is a little creation for having adverts beside the articles and fact cards. Mainly for larger screens -->
        <!-- the div here with inline styling: is sorting out a gap issue on small laptop screens -->
-       <div id="gap">
       <div id="trending-claims-column" style="flex: 1" class="mt-2">
           <h2>Trending Claims</h2>
 
-            <div id="trending-false-card"> 
+          <!-- Changed back to class for html validation and changed document.getqueryselector instead of ID-->
+            <div class="trending-false-card"> 
             </div>
-            <div id="trending-last-card"> 
+            <div class="trending-last-card"> 
             </div>
-            <div id="trending-false-card"> 
+            <div class="trending-false-card"> 
             </div>
-            <div id="trending-last-card"> 
+            <div class="trending-last-card"> 
             </div>
-            <div id="trending-false-card"> 
+            <div class="trending-false-card"> 
             </div>
-            <div id="trending-last-card"> 
+            <div class="trending-last-card"> 
             </div>
         </div>
-        </div>
-      
   </div>
   <!-- End of justify content -->
 
+  </main>
+  <!-- End of main content -->
 
 
 
