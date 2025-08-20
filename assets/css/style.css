@@ -27,7 +27,6 @@ html {
 
 /* Edited by Val to support readability */
 body {
-  font: 1rem; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -212,6 +211,7 @@ html body {
 
 /* Adding a nice solid white color, and really thin and subtle box shadow for depth.
 quite like how you see the split between posts on facebook mobile */
+
 main {
   background-color: white;
   box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
@@ -235,11 +235,15 @@ to split up the articles whilst keeping them visually distinct */
   display: none;
 }
 
-textarea{
+.text-area {
   width: 100%;
   color: whitesmoke;
   background-color: darkslategray;
 }
+
+  #trending-claims-column {
+    display: none;
+  }
 
 /* The media queries */
 @media (min-width: 320px) {
@@ -256,7 +260,6 @@ textarea{
     padding: 0;
   }
 }
-
 
 /* Val: Big smartphones (400px and up) */
 @media screen and (min-width: 400px) {
@@ -282,8 +285,15 @@ textarea{
 }
 
 
-/* Val: Large devices (laptops, 900px and up) */
-@media screen and (min-width: 900px) {
+/* Val: Large devices (laptops, 899px and up) */
+@media screen and (min-width: 899px) {
+
+  /* Val: The trending claims column disapears on smaller screens */
+
+   #trending-claims-column {
+    display:block;
+
+  }
     #hero {
         min-height: 450px;
     }
@@ -328,7 +338,27 @@ textarea{
       width: 1300px;
       margin: 0 auto;
     }
+
+
+   /* Val: The trending false claims style */
+
+  .trending-claims-column {
+    display: block;
+  }
+  .trending-claims-column {
+    height: 100%; 
+    text-align: center; 
+    width: 400px;
+    color: #8A9A7C;
+    background-color: darkslategray;
+    border: solid 2px #A14A2F;
+    margin: 1.5rem 0;
+    min-height: 200px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
 }
+
 
 @media screen and (min-width: 1600px) {
     
