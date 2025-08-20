@@ -65,4 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize
   showSlide(0);
+  
+  // Automatic slideshow with delay (7 seconds = 7000 milliseconds)
+  const SLIDE_DELAY = 7000; // milliseconds
+  setInterval(() => {
+    let nextIndex = (currentSlide + 1) % slides.length;
+    showSlide(nextIndex);
+  }, SLIDE_DELAY);
 });
