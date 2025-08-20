@@ -1,15 +1,11 @@
 
-// Example: Dynamically add a fact card to the page
+
+// Merge all DOMContentLoaded logic into one event listener
 document.addEventListener('DOMContentLoaded', function() {
-
-  //here Dylan has changed class to .fact - so we have more control over where a fact will be placed
+  // Fact card logic
   const mainContainer = document.querySelector('.fact');
-
-  //Dylan added an array
   let containers = Array.from(document.querySelectorAll('.fact'));
   if (mainContainer) {
-
-    //dylan added a for loop to detect main elements and inject append fact card to them
     for(let article of containers) {
       const factCard = document.createElement('article');
       factCard.className = 'fact-card';
@@ -19,27 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
       <h6 id="source"><strong>Source -</strong> <span style="font-size: 16px; font-weight: 500;"><a href="#">Example News</a></span></h6>
       <h6 id="checked-on"><strong>Checked on -</strong> <span style="font-size: 16px; font-weight: 500;">August 15, 2025</span></h6>
     `;
-    article.appendChild(factCard);
+      article.appendChild(factCard);
     }
   }
-});
 
-
-  // here is for toggling the nav bar burger
+  // Navbar burger toggle
   const navbarToggler = document.querySelector('.navbar-toggler');
   let dropdownToggle = document.querySelector('#dropdown-toggle');
+  if (navbarToggler && dropdownToggle) {
+    navbarToggler.addEventListener('click', () => {
+      dropdownToggle.style.display = dropdownToggle.style.display === 'block' ? 'none' : 'block';
+    });
+  }
 
-  navbarToggler.addEventListener('click', () => {
-    //Here we are using style.display - either block or none. The id #dropdown-toggle has 
-    //display: none; in the CSS, so it will show when clicked.
-    //the code is handling display none when clicked again.
-    dropdownToggle.style.display = dropdownToggle.style.display === 'block' ? 'none' : 'block';
-  });
-
-
-  //
-
-  document.addEventListener('DOMContentLoaded', function() {
+  // Slideshow logic
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
   const dots = document.querySelectorAll('.dot');
@@ -47,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function showSlide(index) {
     slides.forEach((slide, i) => {
       slide.classList.toggle('active', i === index);
-      dots[i].classList.toggle('active', i === index);
+      if (dots[i]) dots[i].classList.toggle('active', i === index);
     });
     currentSlide = index;
   }
@@ -65,11 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Initialize
   showSlide(0);
-  
+
   // Automatic slideshow with delay (7 seconds = 7000 milliseconds)
   const SLIDE_DELAY = 7000; // milliseconds
-  setInterval(() => {
-    let nextIndex = (currentSlide + 1) % slides.length;
-    showSlide(nextIndex);
-  }, SLIDE_DELAY);
+  if (slides.length > 1) {
+    setInterval(() => {
+      let nextIndex = (currentSlide + 1) % slides.length;
+      showSlide(nextIndex);
+    }, SLIDE_DELAY);
+  }
 });
