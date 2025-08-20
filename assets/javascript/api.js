@@ -1,41 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
+// Example fetch request (replace YOUR_API_KEY with your actual key)
 
-  // --- API Keys (Warning: Do not expose in public code) ---
-  const GNEWS_API_KEY = '55304aed27cb98d5cbe761bd9f45da26';
-  const WEATHER_API_KEY = 'ec7c301c0742903143627a2e2a68544a';
-  const FACTCHECK_API_KEY = 'AIzaSyBU1AxPTZa_inuo5BjhGI-og9yP2ER6dBU';
-
-  // --- GNews Fetch ---
-  function fetchGNews() {
-    const newsTitleEl = document.getElementById('news-title');
-    const newsSubtitleEl = document.getElementById('news-subtitle');
-    const newsMainEl = document.getElementById('news-main');
-
-    // Only fetch if all elements are present
-    if (!newsTitleEl || !newsSubtitleEl || !newsMainEl) {
-      console.warn("GNews elements not found, skipping fetch.");
-      return;
+fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9f45da26')
+  .then(response => response.json())
+  .then(data => {
+    const article = data.articles && data.articles[0];
+    if (article) {
+      document.getElementById('news-title').textContent = article.source.name || "Trendy News";
+      document.getElementById('news-subtitle').textContent = article.title;
+      document.getElementById('news-main').value = article.description || 'No main text available';
     }
+  })
+  .catch(error => console.error('Error:', error));
 
-    fetch(`https://gnews.io/api/v4/search?q=politics&token=${GNEWS_API_KEY}`)
-      .then(response => {
-        if (!response.ok) throw new Error(`GNews API error: ${response.statusText}`);
-        return response.json();
-      })
-      .then(data => {
-        const article = data.articles && data.articles[0];
-        if (article) {
-          newsTitleEl.textContent = article.source.name || "Trendy News";
-          newsSubtitleEl.textContent = article.title;
-          newsMainEl.value = article.description || 'No main text available';
-        } else {
-          console.warn("No articles found from GNews.");
-        }
-      })
-      .catch(error => console.error('GNews fetch error:', error));
-  }
+    
 
-  // --- Weather Fetch ---
+  //API KEY FOR LATER
+
+  //API_KEY=55304aed27cb98d5cbe761bd9f45da26  for Gnews - current one in use
+  //API_KEY=aa741301d76d449caf7c3db1fc865a2b  for newsapi.org
+  //API_KEY=4d98c12ac047854b3b29580bd299b99f  for mediastack
+  //PORT=3000
+
+  // Replace with your actual API endpoint
+
+
+
+  // Val: OpenWeather 
+  // API key ec7c301c0742903143627a2e2a68544a
+
+  // Function to fetch and display weather
   function fetchAndDisplayWeather() {
     const output = document.getElementById('weather-output');
     if (!output) {
