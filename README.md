@@ -263,3 +263,4 @@ The wireframes were designed by Daniel, who focused on creating layouts that enh
 
 ## LightHouse Scores
 ![alt text](assets/Readme-images/image-7.png)
+---
