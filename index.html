@@ -51,14 +51,12 @@
                 <a class="nav-link" href="#social-networks">Contacts</a>
               </li>
                   <li class="nav-item"><a class="nav-link" href="#">UK News</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Geopolitics</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#">Technology</a></li>
             </ul>
             <!-- end of nav lists -->
 
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <button id="search-results" class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
         </div>
@@ -80,6 +78,17 @@
             alt="A mural-style illustration showing key moments and figures from world history, including ancient pyramids, explorers on a sailing ship, inventors with a printing press, soldiers, scientists, and modern technology like satellites and wind turbines. The background features a globe and a warm, inspirational atmosphere. The text History of the World appears at the top in large gold letters."
             class="world-history-image" area-label="World History Image">
         </div>
+
+         <!-- Navigation arrows -->
+        <a class="slide-prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="slide-next" onclick="changeSlide(1)">&#10095;</a>
+
+        <!-- Dots indicators -->
+        <div class="slide-dots">
+          <span class="dot active" onclick="currentSlideSet(1)"></span>
+          <span class="dot" onclick="currentSlideSet(2)"></span>
+        </div>
+
       </div>
     </section>
     <!-- End of hero section -->
@@ -92,25 +101,37 @@
       <p style="font-size: medium;">A real-time news and fact-checking platform
          designed to empower users with verified information and combat misinformation.</p>
       <div class="d-flex justify-content-center">
+
         <!-- button centered for better ux -Jake -->
-        <button class="btn btn-primary rounded-0 bg-transparent text-black border-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Instructions
+        <button class="btn btn-primary rounded-0 bg-transparent text-black border-dark" data-bs-toggle="modal" data-bs-target="#guidanceModal">Guidance <i class="fa fa-info-circle" aria-hidden="true"></i>
         </button>
       </div>
 
-      <!-- Modal added to the button for additional information on site features and uses -Jake -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+      <!-- Modal for site guidance and navigation tips -->
+      <div class="modal fade" id="guidanceModal" tabindex="-1" 
+           aria-labelledby="guidanceModalTitle" 
+           aria-describedby="guidanceModalDescription" 
+           aria-hidden="true" 
+           role="dialog" 
+           aria-modal="true">
+        <div class="modal-dialog" role="document">
           <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Instructions/Information</h5>
-          <button type="button" class="btn-close rounded-0" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          All of the instructions and additional information will be provided here.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Close</button>
-        </div>
+            <div class="modal-header text-center">
+              <h5 class="modal-title w-100" id="guidanceModalTitle">Site Navigation Guide</h5>
+              <button type="button" class="btn-close position-absolute end-0 me-3" data-bs-dismiss="modal" aria-label="Close guidance modal"></button>
+            </div>
+            <div class="modal-body">
+              <p id="guidanceModalDescription">Here are some tips to help you navigate the site effectively:</p>
+              <ul role="list">
+                <li class="mb-2">Use the search bar to find specific topics or articles.</li>
+                <li class="mb-2">Click on "Get Your Weather" to view local weather updates.</li>
+                <li class="mb-2">News articles provided are checked for authenticity.</li>
+                <li class="mb-2">Contact us via the footer for feedback or inquiries.</li>
+              </ul>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
@@ -208,25 +229,28 @@
       </div>
 
       <!-- Here is a little creation for having adverts beside the articles and fact cards. Mainly for larger screens -->
-      <div id="trending-claims-column" style="flex: 1">
+       <!-- the div here with inline styling: is sorting out a gap issue on small laptop screens -->
+       <div id="gap">
+      <div id="trending-claims-column" style="flex: 1" class="mt-2">
           <h2>Trending Claims</h2>
 
-            <div class="trending-false-card"> 
+            <div id="trending-false-card"> 
             </div>
-            <div class="trending-last-card"> 
+            <div id="trending-last-card"> 
             </div>
-            <div class="trending-false-card"> 
+            <div id="trending-false-card"> 
             </div>
-            <div class="trending-last-card"> 
+            <div id="trending-last-card"> 
             </div>
-            <div class="trending-false-card"> 
+            <div id="trending-false-card"> 
             </div>
-            <div class="trending-last-card"> 
+            <div id="trending-last-card"> 
             </div>
         </div>
+        </div>
       
-      </div>
-      <!-- End of justify content -->
+  </div>
+  <!-- End of justify content -->
 
 
 
@@ -266,6 +290,7 @@
   <!-- Our JavaScript -->
   <script src="assets/javascript/script.js"></script>
   <script src="assets/javascript/api.js"></script>
+  <script src="assets/javascript/search.js"></script>
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/27f757781e.js" crossorigin="anonymous"></script>

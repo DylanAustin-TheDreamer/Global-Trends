@@ -1,5 +1,4 @@
 
-
 // Merge all DOMContentLoaded logic into one event listener
 document.addEventListener('DOMContentLoaded', function() {
   // Fact card logic
