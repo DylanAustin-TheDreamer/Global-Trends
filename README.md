@@ -296,3 +296,5 @@ created dividers with a fixed height
 article information when we didn't want that to happen.
 - Valentyna had mentioned she had some trouble getting the CSS to work for her trending claims container, and I had advised her on
 how to set up display: none; before media queries, and I had fixed her JS syntax on the api.js. The functions were not properly closed.
+it also turned out that Val was trying to call an element with an ID by a class selector. 
+![alt text](image-3.png)

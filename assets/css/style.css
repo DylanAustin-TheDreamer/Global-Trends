@@ -27,7 +27,6 @@ html {
 
 /* Edited by Val to support readability */
 body {
-  font: 1rem; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -72,6 +71,38 @@ main {
   height: 80%;
   z-index: 1;
   top: 0;
+}
+
+/* Navigation Arrows */
+.slide-prev, .slide-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  z-index: 4;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.slide-prev {
+  left: 20px;
+  border-radius: 0 3px 3px 0;
+}
+
+.slide-next {
+  right: 20px;
+  border-radius: 3px 0 0 3px;
+}
+
+.slide-prev:hover, .slide-next:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* Individual Slides */
@@ -121,38 +152,6 @@ main {
 
 .fade-slide {
   animation: fade 1s;
-}
-
-/* Navigation Arrows */
-.slide-prev, .slide-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-  z-index: 4;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.slide-prev {
-  left: 20px;
-  border-radius: 0 3px 3px 0;
-}
-
-.slide-next {
-  right: 20px;
-  border-radius: 3px 0 0 3px;
-}
-
-.slide-prev:hover, .slide-next:hover {
-  background: rgba(0, 0, 0, 0.8);
 }
 
 /* Dots Indicators */
@@ -212,6 +211,7 @@ html body {
 
 /* Adding a nice solid white color, and really thin and subtle box shadow for depth.
 quite like how you see the split between posts on facebook mobile */
+
 main {
   background-color: white;
   box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
@@ -235,11 +235,41 @@ to split up the articles whilst keeping them visually distinct */
   display: none;
 }
 
-textarea{
+.text-area {
   width: 100%;
   color: whitesmoke;
   background-color: darkslategray;
 }
+
+/* For The Trending Claims */
+  #gap{
+    display: none;
+    padding-left: 10px;
+    flex: 1;
+  }
+  #trending-claims-column {
+    display: none;
+    height: 100%; 
+    text-align: center; 
+    width: 400px;
+    color: whitesmoke;
+    background-color: darkslategray;
+    border: solid 2px #A14A2F;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  #trending-false-card{
+    display: none; /* Hidden by default */
+    margin-top: 25px;
+    border: solid 2px #A14A2F;
+    text-align: center;
+    color: whitesmoke;
+    background-color: rgb(33, 54, 54);
+  }
+  #trending-claims-column, h2 {
+    color: #8A9A7C;
+  }
+
 
 /* The media queries */
 @media (min-width: 320px) {
@@ -255,8 +285,11 @@ textarea{
   body {
     padding: 0;
   }
-}
 
+  #guidanceModal {
+      font-size: 14px;
+    }
+}
 
 /* Val: Big smartphones (400px and up) */
 @media screen and (min-width: 400px) {
@@ -279,11 +312,31 @@ textarea{
       box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
       border-bottom: #1A3C34 solid 18px;
     }
+
+    #guidanceModal {
+      font-size: 20px;
+    }
 }
 
 
-/* Val: Large devices (laptops, 900px and up) */
-@media screen and (min-width: 900px) {
+/* Dylan changed values to 1024px*/
+/* Val: Large devices (laptops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+
+  /* Val: The trending claims column disapears on smaller screens */
+  #trending-claims-column {
+    display: block;
+    width: 100%;
+    align-items: center;
+  }
+  #trending-false-card {
+    display: block;
+    width: 400px;
+    margin: 0 auto;
+  }
+  #gap{
+    display: block;
+  }
     #hero {
         min-height: 450px;
     }
@@ -299,6 +352,7 @@ textarea{
 }
 
 @media screen and (min-width: 1440px){
+
     #hero {
       min-height: 450px;
       margin-bottom: -40px;
@@ -329,6 +383,7 @@ textarea{
       margin: 0 auto;
     }
 }
+
 
 @media screen and (min-width: 1600px) {
     

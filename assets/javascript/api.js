@@ -1,11 +1,11 @@
 // Example fetch request (replace YOUR_API_KEY with your actual key)
 
 //api and url to paste in fetch for newsapi.org -- https://newsapi.org/v2/top-headlines?country=us&apiKey=aa741301d76d449caf7c3db1fc865a2b
-fetch('https://gnews.io/api/v4/search?q=politics&token=2fc6e388cd16c58e7ee1d222b9ed381c')
+fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9f45da26')
   .then(response => response.json())
   .then(data => {
     const article = data.articles && data.articles[1];
-    if (article) {
+    if (article && article.source && article.title) {
       document.getElementById('news-title').textContent = article.source.name || "Trendy News";
       document.getElementById('news-subtitle').textContent = article.title;
       document.getElementById('news-main').value = article.description || 'No main text available';
@@ -40,12 +40,10 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=2fc6e388cd16c58e7ee1d222b
   })
   .catch(error => console.error('Error:', error));
 
-  //--------------------------------------------------------------------------------------------------------
+    
 
   //API KEY FOR LATER
-  //Jakes GNews API_KEY = 2fc6e388cd16c58e7ee1d222b9ed381c
   //Gnews URL for roll out - https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9f45da26
-  //--------------------------------------------------------------------------------------------------------
   //API_KEY=55304aed27cb98d5cbe761bd9f45da26  for Gnews - current one in use
   //API_KEY=aa741301d76d449caf7c3db1fc865a2b  for newsapi.org
   //API_KEY=4d98c12ac047854b3b29580bd299b99f  for mediastack
@@ -55,13 +53,8 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=2fc6e388cd16c58e7ee1d222b
 
 
 
-//----------------------------------------------------------------------------------------------------------
-
   // Val: OpenWeather 
   // API key ec7c301c0742903143627a2e2a68544a
-
-
-
 
   // Function to fetch and display weather
   function fetchAndDisplayWeather() {
@@ -215,4 +208,55 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=2fc6e388cd16c58e7ee1d222b
   // Only fetch weather when button is clicked
   document.getElementById('get-weather').addEventListener('click', fetchAndDisplayWeather);
 
+  fetchTrendingFalseClaims();
+
+  //const FACTCHECK_API_KEY = "AIzaSyBU1AxPTZa_inuo5BjhGI-og9yP2ER6dBU";
+
+  // --- Val: Trending False Claims ---
+  function renderTrendingFalseCard(claims) {
+    const container = document.getElementById("trending-false-card");
+    if (!container) {
+        console.warn("Trending false card container not found.");
+        return;
+    }
+    container.innerHTML = "";
+
+    if (!claims || claims.length === 0) {
+      container.innerHTML = "<p>No trending false claims found. Stay curious and cautious.</p>";
+      return;
+    }
+
+    const latest = claims[0];
+    const review = latest.claimReview && latest.claimReview[0];
+    if (!review) {
+        container.innerHTML = "<p>Claim found, but no review available.</p>";
+        return;
+    }
+
+    const card = document.createElement("div");
+    card.className = "false-fact-card";
+    card.innerHTML = `
+      <h3>🚨 Trending False Claim</h3>
+      <p><strong>Claim:</strong> ${latest.text}</p>
+      <p><strong>Verdict:</strong> ${review.text}</p>
+      <p><strong>Source:</strong> <a href="${review.url}" target="_blank" rel="noopener noreferrer">${review.publisher.name}</a></p>
+      <p><em>Published:</em> ${new Date(review.reviewDate).toLocaleDateString()}</p>
+    `;
+    container.appendChild(card);
+  }
+
+  function fetchTrendingFalseClaims() {
+    fetch(`https://factchecktools.googleapis.com/v1alpha1/claims:search?query=trending&key=AIzaSyBU1AxPTZa_inuo5BjhGI-og9yP2ER6dBU`)
+      .then(response => {
+        if (!response.ok) throw new Error(`Fact Check API error: ${response.statusText}`);
+        return response.json();
+      })
+      .then(data => {
+        renderTrendingFalseCard(data.claims || []);
+      })
+      .catch(err => {
+        console.error("Fact Check API fetch error:", err);
+        renderTrendingFalseCard([]);
+      });
+  }
 
