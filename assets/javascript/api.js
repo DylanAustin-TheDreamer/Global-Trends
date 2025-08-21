@@ -32,7 +32,7 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
       if (article.source.name == false) {
         document.getElementById('verdict').innerHTML = "<strong>Verdict: </strong>Unknown Source";
       } else {
-        document.getElementById('verdict').innerHTML = "<strong>Verdict: </strong>Known Source" + '<img src="https://img.icons8.com/?size=100&id=15427&format=png&color=000000" style="width: 35px; height: auto; padding-left: 10px;">';
+        document.getElementById('verdict').innerHTML = "<strong>Verdict: </strong>Known Source" + '<img src="https://img.icons8.com/?size=100&id=15427&format=png&color=000000" alt="Verified checkmark icon" style="width: 35px; height: auto; padding-left: 10px;">';
       }
 
     }
@@ -127,6 +127,11 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
           
           const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
           
+          // Get weather descriptions for alt text
+          const todayDescription = currentData.weather[0].description;
+          const tomorrowDescription = tomorrowData.weather[0].description;
+          const dayAfterDescription = dayAfterData.weather[0].description;
+          
           // Display location above table and 3-day forecast in table
           output.innerHTML = `
             <style>
@@ -158,7 +163,7 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
                 <tr>
                   <td style="padding: 12px 20px; font-weight: 600; border-bottom: 1px solid #dee2e6;">Today</td>
                   <td style="padding: 12px 20px; text-align: center; border-bottom: 1px solid #dee2e6;">
-                    <img src="https://openweathermap.org/img/wn/${todayIcon}.png" alt="today weather" style="width: 50px; height: 50px;">
+                    <img src="https://openweathermap.org/img/wn/${todayIcon}.png" alt="Today's weather: ${todayDescription}" style="width: 50px; height: 50px;">
                   </td>
                   <td style="padding: 12px 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #dee2e6;">${todayTemp}°C</td>
                   <td class="wind-column" style="padding: 12px 20px; text-align: center; border-bottom: 1px solid #dee2e6;">
@@ -170,7 +175,7 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
                 <tr>
                   <td style="padding: 12px 20px; font-weight: 600; border-bottom: 1px solid #dee2e6;">${dayNames[tomorrow.getDay()]}</td>
                   <td style="padding: 12px 20px; text-align: center; border-bottom: 1px solid #dee2e6;">
-                    <img src="https://openweathermap.org/img/wn/${tomorrowIcon}.png" alt="tomorrow weather" style="width: 50px; height: 50px;">
+                    <img src="https://openweathermap.org/img/wn/${tomorrowIcon}.png" alt="Tomorrow's weather: ${tomorrowDescription}" style="width: 50px; height: 50px;">
                   </td>
                   <td style="padding: 12px 20px; font-size: 18px; font-weight: bold; border-bottom: 1px solid #dee2e6;">${tomorrowTemp}°C</td>
                   <td class="wind-column" style="padding: 12px 20px; text-align: center; border-bottom: 1px solid #dee2e6;">
@@ -182,7 +187,7 @@ fetch('https://gnews.io/api/v4/search?q=politics&token=55304aed27cb98d5cbe761bd9
                 <tr>
                   <td style="padding: 12px 20px; font-weight: 600;">${dayNames[dayAfter.getDay()]}</td>
                   <td style="padding: 12px 20px; text-align: center;">
-                    <img src="https://openweathermap.org/img/wn/${dayAfterIcon}.png" alt="day after weather" style="width: 50px; height: 50px;">
+                    <img src="https://openweathermap.org/img/wn/${dayAfterIcon}.png" alt="Day after tomorrow's weather: ${dayAfterDescription}" style="width: 50px; height: 50px;">
                   </td>
                   <td style="padding: 12px 20px; font-size: 18px; font-weight: bold;">${dayAfterTemp}°C</td>
                   <td class="wind-column" style="padding: 12px 20px; text-align: center;">
