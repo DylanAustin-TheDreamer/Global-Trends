@@ -9,9 +9,17 @@
   <meta name="keywords" content="fact check, news, verified news, truth, misinformation, fake check, safe news">
   <meta name="author" content="Code Institute students project">
 
-  <link rel="icon" type="image/png" href="assets/images/tick-fav.png">
   <title>Truth is a right, not a privilege.</title>
-  <!-- Bootstrap CSS -->
+  <!-- our CSS - Load non-critical CSS async -->
+  <link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+  <!-- our article CSS file - Load async -->
+  <link rel="preload" href="assets/css/article.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="assets/css/article.css"></noscript>
+
+  <!-- Preload images for performance -->
+  <link rel="preload" as="image" href="assets/images/earth.webp">
+  <link rel="icon" type="image/png" href="assets/images/tick-fav.webp">
   
   <!-- our CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -21,7 +29,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
 
   <!-- font awesome kit -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
 </head>
 
 <body>
@@ -71,12 +79,12 @@
         <div class="slide fade-slide active">
           <img src="assets/images/earthimage.webp"
             alt="Earth floating in the darkness of space, showing swirling white clouds over blue oceans and brown continents, with no visible text, conveying a sense of isolation and tranquility"
-            class="earth-image">
+            class="earth-image" loading="eager">
         </div>
         <div class="slide fade-slide">
           <img src="assets/images/worldhistory.webp"
             alt="A mural-style illustration showing key moments and figures from world history, including ancient pyramids, explorers on a sailing ship, inventors with a printing press, soldiers, scientists, and modern technology like satellites and wind turbines. The background features a globe and a warm, inspirational atmosphere. The text History of the World appears at the top in large gold letters."
-            class="world-history-image">
+            class="world-history-image" loading="eager">
         </div>
 
          <!-- Navigation arrows -->
@@ -129,6 +137,8 @@
                 <li class="mb-2">Click on "Get Your Weather" to view local weather updates.</li>
                 <li class="mb-2">News articles provided are checked for authenticity.</li>
                 <li class="mb-2">Contact us via the footer for feedback or inquiries.</li>
+                <br>
+                <li class="mb-2">Use keyboard shortcuts "A" for articles and "W" for weather.</li>
               </ul>
             </div>
             <div class="modal-footer justify-content-center">
@@ -159,7 +169,7 @@
 
         <div class="flex-grid">
             <div class="article-left text-center" style="display: flex; flex-wrap: wrap;">
-                <text-area id="news-main">This is the text-area</text-area>
+                <text-area id="news-main">No main text available</text-area>
             </div>
             <div class="article-right">
             </div>
@@ -194,7 +204,7 @@
 
         <div class="flex-grid">
             <div class="article-left text-center" style="display: flex; flex-wrap: wrap;">
-                <text-area>This is the text-area</text-area>
+                <text-area>No main text available</text-area>
             </div>
             <div class="article-right">
                 

@@ -63,3 +63,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }, SLIDE_DELAY);
   }
 });
+
+
+// here is for keyboard navigation - for accessbility
+
+document.addEventListener('keydown', function(e) {
+  // Only trigger if not typing in an input, textarea, or contenteditable
+  if (
+    document.activeElement.tagName === 'INPUT' ||
+    document.activeElement.tagName === 'TEXTAREA' ||
+    document.activeElement.isContentEditable
+  ) {
+    return;
+  }
+  // Press "A" to go to articles
+  if (e.key.toLowerCase() === 'a') {
+    const articlesSection = document.getElementById('articles');
+    if (articlesSection) {
+      articlesSection.scrollIntoView({ behavior: 'smooth' });
+      articlesSection.focus();
+    }
+  }
+  // Press "W" to go to weather
+  if (e.key.toLowerCase() === 'w') {
+    const weatherSection = document.getElementById('weather');
+    if (weatherSection) {
+      weatherSection.scrollIntoView({ behavior: 'smooth' });
+      weatherSection.focus();
+    }
+  }
+});

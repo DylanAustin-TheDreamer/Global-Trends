@@ -262,5 +262,8 @@ The wireframes were designed by Daniel, who focused on creating layouts that enh
 - **Browser DevTools**: Testing and debugging.
 
 ## LightHouse Scores
+- ## Mobile
 ![alt text](assets/Readme-images/image-7.png)
----
+
+- ## Desktop
+![alt text](assets/Readme-images/desktopLH.png)
