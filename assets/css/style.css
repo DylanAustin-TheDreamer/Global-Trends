@@ -125,11 +125,6 @@ We can adjust their margin on higher breakpoints */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Earth Image Specific Styles */
-.earth-image {
-  object-position: center 25%;
-}
-
 /* World History Image Specific Styles */
 .world-history-image {
   object-position: center center;
