@@ -275,10 +275,13 @@ Dylan took on a leadership role, overseeing the project board and ensuring tasks
 
 - **HTML Testing**: W3C HTML Validator found some issues, that were fixed by Dylan.
 <details>
+
 <summary> Example</summary>
+
 ![alt text](assets/Readme-images/image-4.png)
 
 </details>
+
 
 - **API Integration**: Extensive errors with getting APIs to work were resolved with the help of GitHub Copilot, which assisted in understanding URLs and query structures.
 - **CSS Troubleshooting**: Valentyna faced issues with the trending claims container, which were resolved by adjusting `display: none;` before media queries and fixing JS syntax errors. Additionally, a class selector was mistakenly used instead of an ID selector, which was corrected.
@@ -332,6 +335,7 @@ Dylan took on a leadership role, overseeing the project board and ensuring tasks
 
 <details>
 <summary> CSS Validation </summary>
+
 CSS Validation of style.css
 
 ![CSS Validation of style.css](assets\Readme-images\style.css-validation.png)
